@@ -1,0 +1,19 @@
+@use '../base/' as *;
+@use '../abstracts/' as a;
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 1.25rem;
+  & .keyboard-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}

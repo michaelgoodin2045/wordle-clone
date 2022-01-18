@@ -1,0 +1,15 @@
+@use '../base/' as *;
+@use '../abstracts/' as a;
+
+.grid {
+  width: 90%;
+  height: fit-content;
+  margin-inline: auto;
+  & .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

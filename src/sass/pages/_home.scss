@@ -1,0 +1,21 @@
+@use '../base/' as *;
+@use '../abstracts/' as a;
+
+body {
+  width: 100vw;
+  height: min(100vh, 900px);
+  background-color: #f2f2f2;
+  font-family: $ff--mont;
+}
+
+.App {
+  width: min(100vw, 400px);
+  background: linear-gradient(to bottom, #141e30, #243b55);
+  height: min(100vh, 667px);
+  color: $clr--white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: auto;
+}

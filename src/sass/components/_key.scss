@@ -1,0 +1,31 @@
+@use '../base/' as *;
+@use '../abstracts/' as a;
+
+.key {
+  width: 1.5625rem;
+  height: 3rem;
+  margin: 0.25rem;
+  background: linear-gradient(
+    to bottom right,
+    $clr--key-bg-1,
+    $clr--key-bg,
+    $clr--key-bg-3
+  );
+  color: $clr--black;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 1px 4px 6px -5px #dddddd;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+  &.special {
+    width: 2.75rem;
+  }
+  &:hover {
+    transform: scale(1.2);
+  }
+}
