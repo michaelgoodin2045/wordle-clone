@@ -2,9 +2,11 @@ import React from 'react';
 import Key from './Key';
 import KeySpecial from './KeySpecial';
 
-const Keyboard = ({ guesses, gridChar, deleteLetter }) => {
+const Keyboard = ({ guesses, gridChar, deleteLetter, onEnter }) => {
   const onClick = (value) => {
-    if (value === 'Del') {
+    if (value === 'Ent') {
+      onEnter();
+    } else if (value === 'Del') {
       deleteLetter();
     } else {
       gridChar(value);
@@ -37,7 +39,7 @@ const Keyboard = ({ guesses, gridChar, deleteLetter }) => {
         <Key onClick={onClick} value="L" />
       </div>
       <div className="keyboard-row bottom">
-        <KeySpecial value="Ent" />
+        <KeySpecial onClick={onClick} value="Ent" />
         <Key onClick={onClick} value="Z" />
         <Key onClick={onClick} value="X" />
         <Key onClick={onClick} value="C" />

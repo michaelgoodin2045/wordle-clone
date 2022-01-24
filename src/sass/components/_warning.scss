@@ -1,0 +1,22 @@
+@use '../base/' as *;
+@use '../abstracts/' as a;
+
+.warning {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  outline: 2px solid yellow;
+  width: 200px;
+  height: 36px;
+  position: absolute;
+  top: 100px;
+  left: calc((50vw - 100px));
+  background-color: #cca04e;
+  color: black;
+  font-size: 1rem;
+  font-weight: 700;
+  &.show-warning {
+    display: flex;
+  }
+}

@@ -9,9 +9,10 @@ body {
 }
 
 .App {
-  width: min(100vw, 400px);
+  //width: min(100vw, 400px);
+  width: 100vw;
   background: linear-gradient(to bottom, #141e30, #243b55);
-  height: min(100vh, 667px);
+  height: max(100vh, 667px);
   color: $clr--white;
   display: flex;
   flex-direction: column;
