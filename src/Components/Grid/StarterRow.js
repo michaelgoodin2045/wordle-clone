@@ -7,7 +7,7 @@ const StarterRow = () => {
   return (
     <div className="row empty">
       {starterRow.map((_, index) => (
-        <Cell key={index} />
+        <Cell key={index} index={index} />
       ))}
     </div>
   );

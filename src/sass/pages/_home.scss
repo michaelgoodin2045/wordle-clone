@@ -11,12 +11,12 @@ body {
 .App {
   //width: min(100vw, 400px);
   width: 100vw;
-  background: linear-gradient(to bottom, #141e30, #243b55);
+  background: linear-gradient(to bottom, $clr--top-bg, $clr--bottom-bg);
   height: max(100vh, 667px);
-  color: $clr--white;
+  color: $clr--text;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-inline: auto;
 }

@@ -23,8 +23,43 @@
   cursor: pointer;
   &.special {
     width: 2.75rem;
+    & .correct {
+      background: $clr--correct;
+    }
+    &.present {
+      background: $clr--present;
+    }
+    &.absent {
+      background: $clr--absent;
+      color: darkgray;
+    }
   }
   &:hover {
     transform: scale(1.2);
+  }
+  &.correct {
+    background: linear-gradient(
+      to bottom right,
+      $clr--correct-1,
+      $clr--correct,
+      $clr--correct-3
+    );
+  }
+  &.present {
+    background: linear-gradient(
+      to bottom right,
+      $clr--present-1,
+      $clr--present,
+      $clr--present-3
+    );
+  }
+  &.absent {
+    background: linear-gradient(
+      to bottom right,
+      $clr--absent-1,
+      $clr--absent-2,
+      $clr--absent
+    );
+    color: darkgray;
   }
 }

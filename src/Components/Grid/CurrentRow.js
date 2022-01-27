@@ -12,7 +12,7 @@ const CurrentRow = ({ guess }) => {
         <Cell key={index} value={letter} />
       ))}
       {emptyCells.map((_, index) => (
-        <Cell key={index} />
+        <Cell key={index} index={index} />
       ))}
     </div>
   );

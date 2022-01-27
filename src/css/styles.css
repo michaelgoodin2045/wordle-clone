@@ -131,16 +131,221 @@ input {
 .cell {
   width: 3rem;
   height: 3rem;
-  outline: 2px solid #b0b0b0;
+  background: #ffffff;
+  outline: 1px solid #b4b4b4;
   border-radius: 5px;
   font-size: 2.25rem;
   font-weight: 600;
+  color: #030200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.cell .c0.absent {
+  width: 100%;
+  height: 100%;
+  background: #111111;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+}
+.cell .c0.present {
+  width: 100%;
+  height: 100%;
+  background: #ffff00;
+  color: #030200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+}
+.cell .c0.correct {
+  width: 100%;
+  height: 100%;
+  background: #00ff00;
+  color: #030200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+}
+.cell .c1.absent {
+  width: 100%;
+  height: 100%;
+  background: #111111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 500ms;
+}
+.cell .c1.present {
+  width: 100%;
+  height: 100%;
+  background: #ffff00;
+  color: #030200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 500ms;
+}
+.cell .c1.correct {
+  width: 100%;
+  height: 100%;
+  background: #00ff00;
+  color: #030200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 500ms;
+}
+.cell .c2.absent {
+  width: 100%;
+  height: 100%;
+  background: #111111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 800ms;
+}
+.cell .c2.present {
+  width: 100%;
+  height: 100%;
+  background: #ffff00;
+  color: #030200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 800ms;
+}
+.cell .c2.correct {
+  width: 100%;
+  height: 100%;
+  background: #00ff00;
+  color: #030200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 800ms;
+}
+.cell .c3.absent {
+  width: 100%;
+  height: 100%;
+  background: #111111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1100ms;
+}
+.cell .c3.present {
+  width: 100%;
+  height: 100%;
+  background: #ffff00;
+  color: #030200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1100ms;
+}
+.cell .c3.correct {
+  width: 100%;
+  height: 100%;
+  background: #00ff00;
+  color: #030200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1100ms;
+}
+.cell .c4.absent {
+  width: 100%;
+  height: 100%;
+  background: #111111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1400ms;
+}
+.cell .c4.present {
+  width: 100%;
+  height: 100%;
+  background: #ffff00;
+  color: #030200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1400ms;
+}
+.cell .c4.correct {
+  width: 100%;
+  height: 100%;
+  background: #00ff00;
+  color: #030200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1400ms;
 }
 
+@keyframes change {
+  0% {
+    transform: translateY(-100%) rotateY(180deg);
+  }
+  100% {
+    transform: translateY(100) rotateY(0);
+  }
+}
 .keyboard {
   display: flex;
   flex-direction: column;
@@ -162,7 +367,7 @@ input {
   width: 1.5625rem;
   height: 3rem;
   margin: 0.25rem;
-  background: linear-gradient(to bottom right, #efefef, #d6d6d6, #555555);
+  background: linear-gradient(to bottom right, #d6d6d6, #d6d6d6, #a9a9a9);
   color: black;
   font-size: 1rem;
   font-weight: 700;
@@ -177,8 +382,28 @@ input {
 .key.special {
   width: 2.75rem;
 }
+.key.special .correct {
+  background: #00ff00;
+}
+.key.special.present {
+  background: #ffff00;
+}
+.key.special.absent {
+  background: #111111;
+  color: darkgray;
+}
 .key:hover {
   transform: scale(1.2);
+}
+.key.correct {
+  background: linear-gradient(to bottom right, #5cff5c, #00ff00, #008f00);
+}
+.key.present {
+  background: linear-gradient(to bottom right, #ffff5c, #ffff00, #8f8f00);
+}
+.key.absent {
+  background: linear-gradient(to bottom right, #2f2f2f, #1f1f1f, #111111);
+  color: darkgray;
 }
 
 .warning {
@@ -186,19 +411,32 @@ input {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  outline: 2px solid yellow;
   width: 200px;
-  height: 36px;
+  height: 72px;
+  border-radius: 5px;
   position: absolute;
-  top: 100px;
+  top: 120px;
   left: calc((50vw - 100px));
-  background-color: #cca04e;
-  color: black;
-  font-size: 1rem;
-  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  box-shadow: 5px 10px 10px -8px black;
 }
 .warning.show-warning {
   display: flex;
+}
+
+.none {
+  display: none;
+}
+
+.message-item {
+  font-size: 1rem;
+  font-weight: 700;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 body {
@@ -210,12 +448,12 @@ body {
 
 .App {
   width: 100vw;
-  background: linear-gradient(to bottom, #141e30, #243b55);
+  background: linear-gradient(to bottom, #ffffff, #faffff);
   height: max(100vh, 667px);
-  color: white;
+  color: #030200;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-inline: auto;
 }

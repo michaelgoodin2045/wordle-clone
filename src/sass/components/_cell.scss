@@ -4,12 +4,229 @@
 .cell {
   width: 3rem;
   height: 3rem;
-  outline: 2px solid $clr--border;
+  background: $clr--top-bg;
+  outline: 1px solid $clr--border;
   border-radius: 5px;
   font-size: 2.25rem;
   font-weight: 600;
-  color: $clr--white;
+  color: $clr--text;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  & .c0 {
+    &.absent {
+      width: 100%;
+      height: 100%;
+      background: $clr--absent;
+      color: $clr--white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 300ms;
+    }
+    &.present {
+      width: 100%;
+      height: 100%;
+      background: $clr--present;
+      color: $clr--text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 300ms;
+    }
+    &.correct {
+      width: 100%;
+      height: 100%;
+      background: $clr--correct;
+      color: $clr--text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 300ms;
+    }
+  }
+  & .c1 {
+    &.absent {
+      width: 100%;
+      height: 100%;
+      background: $clr--absent;
+      color: $clr--white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 500ms;
+    }
+    &.present {
+      width: 100%;
+      height: 100%;
+      background: $clr--present;
+      color: $clr--text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 500ms;
+    }
+    &.correct {
+      width: 100%;
+      height: 100%;
+      background: $clr--correct;
+      color: $clr--text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 500ms;
+    }
+  }
+  & .c2 {
+    &.absent {
+      width: 100%;
+      height: 100%;
+      background: $clr--absent;
+      color: $clr--white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 800ms;
+    }
+    &.present {
+      width: 100%;
+      height: 100%;
+      background: $clr--present;
+      color: $clr--text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 800ms;
+    }
+    &.correct {
+      width: 100%;
+      height: 100%;
+      background: $clr--correct;
+      color: $clr--text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 800ms;
+    }
+  }
+  & .c3 {
+    &.absent {
+      width: 100%;
+      height: 100%;
+      background: $clr--absent;
+      color: $clr--white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 1100ms;
+    }
+    &.present {
+      width: 100%;
+      height: 100%;
+      background: $clr--present;
+      color: $clr--text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 1100ms;
+    }
+    &.correct {
+      width: 100%;
+      height: 100%;
+      background: $clr--correct;
+      color: $clr--text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 1100ms;
+    }
+  }
+  & .c4 {
+    &.absent {
+      width: 100%;
+      height: 100%;
+      background: $clr--absent;
+      color: $clr--white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 1400ms;
+    }
+    &.present {
+      width: 100%;
+      height: 100%;
+      background: $clr--present;
+      color: $clr--text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 1400ms;
+    }
+    &.correct {
+      width: 100%;
+      height: 100%;
+      background: $clr--correct;
+      color: $clr--text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: change;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 1400ms;
+    }
+  }
+}
+
+@keyframes change {
+  0% {
+    transform: translateY(-100%) rotateY(180deg);
+  }
+
+  100% {
+    transform: translateY(100) rotateY(0);
+  }
 }

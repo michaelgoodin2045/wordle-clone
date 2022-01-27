@@ -1,9 +1,15 @@
 import React from 'react';
 
-const Warning = ({ warning, message }) => {
+const Warning = ({ warning, alerts, idx }) => {
   return (
     <div className={warning ? 'warning show-warning' : 'warning'}>
-      <h2 className="warning-text">{message}</h2>
+      {alerts.map((alert, index) => {
+        return (
+          <div className={idx === index ? 'message-item' : 'none'} key={index}>
+            <h2 className="message-text">{alert}</h2>
+          </div>
+        );
+      })}
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Key = ({ value, onClick }) => {
+const Key = ({ value, onClick, status }) => {
   return (
-    <div className="key" onClick={() => onClick(value)}>
+    <div className={`key ${status}`} onClick={() => onClick(value)}>
       {value}
     </div>
   );

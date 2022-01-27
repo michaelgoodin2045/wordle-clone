@@ -10,13 +10,6 @@ export const isWinningWord = (word) => {
 };
 
 export const getWordOfTheDay = () => {
-  /*let wordsRandom = [];
-  while (words.length !== 0) {
-    let randomIndex = Math.floor(Math.random() * words.length);
-    wordsRandom.push(words[randomIndex]);
-    words.splice(randomIndex, 1);
-  } */
-  //const newWords = wordsRandom;
   //Start 18 Jan 2022
   const startMs = 1642482000000;
   const now = Date.now();
@@ -29,3 +22,57 @@ export const getWordOfTheDay = () => {
 };
 
 export const { solution, solutionIndex } = getWordOfTheDay();
+
+export const getGuessStatus = (guess) => {
+  const splitSolution = solution.split('');
+  const splitGuess = guess.split('');
+  const solutionCharsUsed = splitSolution.map((_) => false);
+  const statuses = Array.from(Array(guess.length));
+
+  splitGuess.forEach((letter, index) => {
+    if (letter === splitSolution[index]) {
+      statuses[index] = 'correct';
+      solutionCharsUsed[index] = true;
+    }
+  });
+
+  splitGuess.forEach((letter, index) => {
+    if (statuses[index]) return;
+    if (!splitSolution.includes(letter)) {
+      statuses[index] = 'absent';
+    }
+    const presentCharIndex = splitSolution.findIndex(
+      (x, j) => x === letter && !solutionCharsUsed[j]
+    );
+    if (presentCharIndex > -1) {
+      statuses[index] = 'present';
+      solutionCharsUsed[presentCharIndex] = true;
+      return;
+    } else {
+      statuses[index] = 'absent';
+      return;
+    }
+  });
+  return statuses;
+};
+
+export const getKeyStatus = (guesses) => {
+  const charStatus = 'absent' || 'present' || 'correct';
+  const charObj = { letter: charStatus };
+
+  guesses.forEach((word) => {
+    word.split('').forEach((letter, index) => {
+      if (!solution.includes(letter)) {
+        return (charObj[letter] = 'absent');
+      }
+      if (letter === solution[index]) {
+        return (charObj[letter] = 'correct');
+      }
+
+      if (charObj[letter] !== 'correct') {
+        return (charObj[letter] = 'present');
+      }
+    });
+  });
+  return charObj;
+};
